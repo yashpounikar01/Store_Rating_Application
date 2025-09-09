@@ -3,6 +3,7 @@
 A full-stack web application that allows users to rate stores on a scale of **1 to 5**. The system provides **role-based access** for administrators, normal users, and store owners with different functionalities.  
 
 ![Admin](assets/Landing.png)
+
 ![Admin](assets/Login.png)
 
 ---
@@ -29,11 +30,16 @@ A full-stack web application that allows users to rate stores on a scale of **1 
   - Name, Email, Address, Rating  
 - View detailed user info (including store ratings for owners).  
 - Apply filters (Name, Email, Address, Role).  
-- Logout functionality.  
+- Logout functionality.
+
 ![Admin](assets/Admin1.png)
+
 ![Admin](assets/Admin2.png)
+
 ![Admin](assets/Admin3.png)
+
 ![Admin](assets/Admin4.png)
+
 ![Admin](assets/Admin5.png)
 
 
@@ -50,10 +56,14 @@ A full-stack web application that allows users to rate stores on a scale of **1 
   - User’s submitted rating  
 - Submit ratings (1–5).  
 - Modify submitted ratings.  
-- Logout functionality.  
+- Logout functionality.
+  
 ![Normal](assets/Normal1.png)
+
 ![Normal](assets/Normal2.png)
+
 ![Normal](assets/Normal3.png)
+
 ![Normal](assets/Normal4.png)
 
 
@@ -64,8 +74,10 @@ A full-stack web application that allows users to rate stores on a scale of **1 
 - Dashboard with:
   - List of users who rated their store  
   - Average rating of their store  
-- Logout functionality.  
+- Logout functionality.
+  
 ![Alt text](assets/Store1.png)
+
 ![Alt text](assets/Store2.png)
 
 ---
