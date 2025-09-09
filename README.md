@@ -2,7 +2,8 @@
 
 A full-stack web application that allows users to rate stores on a scale of **1 to 5**. The system provides **role-based access** for administrators, normal users, and store owners with different functionalities.  
 
-This project was built as part of a **FullStack Intern Coding Challenge**.
+![Admin](assets/Landing.png)
+![Admin](assets/Login.png)
 
 ---
 
@@ -32,7 +33,8 @@ This project was built as part of a **FullStack Intern Coding Challenge**.
 ![Admin](assets/Admin1.png)
 ![Admin](assets/Admin2.png)
 ![Admin](assets/Admin3.png)
-
+![Admin](assets/Admin4.png)
+![Admin](assets/Admin5.png)
 
 
 ---
@@ -49,8 +51,10 @@ This project was built as part of a **FullStack Intern Coding Challenge**.
 - Submit ratings (1–5).  
 - Modify submitted ratings.  
 - Logout functionality.  
-![Normal](assets/Normal.png)
-![Alt text](assets/update.png)
+![Normal](assets/Normal1.png)
+![Normal](assets/Normal2.png)
+![Normal](assets/Normal3.png)
+![Normal](assets/Normal4.png)
 
 
 ---
@@ -61,8 +65,8 @@ This project was built as part of a **FullStack Intern Coding Challenge**.
   - List of users who rated their store  
   - Average rating of their store  
 - Logout functionality.  
-![Alt text](assets/Store.png)
-![Alt text](assets/updateS.png)
+![Alt text](assets/Store1.png)
+![Alt text](assets/Store2.png)
 
 ---
 
