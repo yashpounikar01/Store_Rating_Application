@@ -12,16 +12,37 @@ const AddUserForm = ({ onClose }) => {
     role: "user",
   });
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // --- Validation before sending to backend ---
+    if (form.name.length < 20 || form.name.length > 60) {
+      return alert("Name must be between 20 and 60 characters.");
+    }
+    if (form.address.length > 400) {
+      return alert("Address cannot exceed 400 characters.");
+    }
+    const passwordRegex =
+      /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$/;
+    if (!passwordRegex.test(form.password)) {
+      return alert(
+        "Password must be 8-16 characters, include at least one uppercase letter and one special character."
+      );
+    }
+
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
-      const res = await axios.post("http://localhost:5000/api/admin/users", form, config);
+      const res = await axios.post(
+        "http://localhost:5000/api/admin/users",
+        form,
+        config
+      );
       alert(res.data.message);
       setForm({ name: "", email: "", address: "", password: "", role: "user" });
-      if(onClose) onClose(); // close modal after submit
+      if (onClose) onClose(); // close modal after submit
     } catch (err) {
       console.error(err);
       alert(err.response?.data?.message || "Error adding user");
@@ -36,10 +57,13 @@ const AddUserForm = ({ onClose }) => {
         name="name"
         value={form.name}
         onChange={handleChange}
-        placeholder="Full Name"
+        placeholder="Full Name (20–60 characters)"
         required
+        minLength={20}
+        maxLength={60}
         style={inputStyle}
       />
+
       <input
         name="email"
         type="email"
@@ -49,23 +73,31 @@ const AddUserForm = ({ onClose }) => {
         required
         style={inputStyle}
       />
-      <input
+
+      <textarea
         name="address"
         value={form.address}
         onChange={handleChange}
-        placeholder="Address"
+        placeholder="Address (max 400 characters)"
         required
+        maxLength={400}
         style={inputStyle}
       />
+
       <input
         name="password"
         type="password"
         value={form.password}
         onChange={handleChange}
-        placeholder="Password"
+        placeholder="Password (8–16 chars, 1 uppercase, 1 special)"
         required
+        minLength={8}
+        maxLength={16}
+        pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$"
+        title="Password must be 8-16 characters, include at least one uppercase letter and one special character."
         style={inputStyle}
       />
+
       <select
         name="role"
         value={form.role}
@@ -77,7 +109,13 @@ const AddUserForm = ({ onClose }) => {
         <option value="store_owner">Store Owner</option>
       </select>
 
-      <div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "20px",
+        }}
+      >
         <button type="submit" style={submitButton}>
           Add User
         </button>
