@@ -29,6 +29,11 @@ This project was built as part of a **FullStack Intern Coding Challenge**.
 - View detailed user info (including store ratings for owners).  
 - Apply filters (Name, Email, Address, Role).  
 - Logout functionality.  
+![Admin](assets/Admin1.png)
+![Admin](assets/Admin2.png)
+![Admin](assets/Admin3.png)
+
+
 
 ---
 
@@ -44,6 +49,9 @@ This project was built as part of a **FullStack Intern Coding Challenge**.
 - Submit ratings (1–5).  
 - Modify submitted ratings.  
 - Logout functionality.  
+![Normal](assets/Normal.png)
+![Alt text](assets/update.png)
+
 
 ---
 
@@ -53,6 +61,8 @@ This project was built as part of a **FullStack Intern Coding Challenge**.
   - List of users who rated their store  
   - Average rating of their store  
 - Logout functionality.  
+![Alt text](assets/Store.png)
+![Alt text](assets/updateS.png)
 
 ---
 
