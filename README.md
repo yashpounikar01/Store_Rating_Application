@@ -78,14 +78,17 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in the `backend/` folder:
-```
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=store_db
-JWT_SECRET=your_jwt_secret
-```
+### Database Configuration
+Edit `config/db.js` and update with your database credentials:
+
+```js
+const pool = mysql.createPool({
+  host: "localhost",   // Change if DB is hosted elsewhere
+  user: "root",        // Your MySQL username
+  password: "yourpassword", // Your MySQL password
+  database: "store_db" // Your database name
+});
+
 
 Run the backend server:
 ```bash
