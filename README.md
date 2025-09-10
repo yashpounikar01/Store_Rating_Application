@@ -185,7 +185,15 @@ CREATE TABLE ratings (
   FOREIGN KEY (store_id) REFERENCES stores(id)
 );
 ```
-
+```sql
+INSERT INTO users (name, email, password, role)
+VALUES ('Admin Name', 'admin@example.com', 'hashed_password_here', 'admin');
+```
+- Create the hashed password using hash.js present in backend folder.
+```bash
+cd backend
+node hash.js
+```
 ---
 
 ## 🔑 Usage Examples
